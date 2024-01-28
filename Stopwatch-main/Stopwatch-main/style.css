@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  background-image: linear-gradient(
+      135deg,
+      rgba(245, 245, 245, 0.3),
+      rgba(158, 219, 240, 0.5)
+    ),
+    url("./background.avif");
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(2px);
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px hsla(0%, 0%, 0%, 0.2);
+  margin-top: 1rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(75px);
+}
+
+.container--timer {
+  padding-inline: 2rem;
+}
+
+.timer {
+  font-family: "Dancing Script", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  background-color: #000;
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.3rem;
+  width: 250px;
+  text-align: center;
+}
+
+.number {
+  display: inline-block;
+  width: 35px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.buttons button {
+  font-size: 2rem;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: #000;
+  width: 40px;
+}
+
+.buttons button[disabled] {
+  color: rgba(16, 16, 16, 0.3);
+  cursor: not-allowed;
+}
+
+.buttons button:not([disabled]):hover {
+  color: blue;
+}
+
+.laps {
+  margin-top: 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+}
+
+.laps::-webkit-scrollbar {
+  display: none;
+}
+
+.container--laps {
+  display: flex;
+  width: min(400px, 90vw);
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  font-family: "Dancing Script", sans-serif;
+}
+
+
+
